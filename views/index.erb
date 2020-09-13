@@ -1,0 +1,31 @@
+<label for="">
+      <a href="/"><i class="fa fa-globe home-active" aria-hidden="true"></i></a>
+      <a href="/add_planet"><i class="fa fa-plus" aria-hidden="true"></i></a>
+</label>
+
+<p class="home blue-border">HOME</p>
+<p class="add-planet">ADD <br> PLANET</p>
+
+<a href="/planets"><h1>PLANETS</h1></a>
+
+<div class="planet">
+
+    <h2 class="blue"><%= earth["name"] %></h2>
+    
+    <img class="img-planets large-planet rotating" src="<%= earth["image_url"] %>" alt="">
+    
+    <h4>DIAMETER</h4>
+    <p class="blue"><%= earth["diameter"] %> KM</p>
+    <h4>MASS</h4>
+    <p class="blue"><%= earth["mass"] %> M</p>
+    <h4>MOON(S)</h4>
+    <p class="blue"><%= earth["moon_count"] %></p>
+
+</div>
+
+<div class="alter-btns">
+
+    <a href="/planet/<%= earth["id"] %>/edit_planet"><i class="fa fa-pencil edit" aria-hidden="true"></i></a>
+    <p class="edit-text">EDIT</p>
+
+</div>

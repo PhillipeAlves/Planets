@@ -1,0 +1,382 @@
+*
+{
+    box-sizing: border-box;
+}
+body
+{
+    background-image: url(https://images.unsplash.com/photo-1570556319136-3cfc640168a4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=882&q=80);
+    background-size: 100%;
+    padding-bottom: 100px;
+    background-position: 20%; 
+    color: whitesmoke;
+    text-align: center;
+    font-family: 'Kodchasan', sans-serif;
+    font-size: 3em;
+    letter-spacing: 3px;
+}
+.wrapper
+{
+    margin: 80px auto 0 auto;
+    width: 800px;
+}
+
+label
+{
+    margin: 0 auto;
+    padding: 0;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-size: 70px;
+}
+.home
+{
+    position: fixed;
+    top: 100px;
+    right: 23px;
+    font-size: .3em;
+    padding-bottom: 10px;
+    border-bottom: 5px solid rgba(245, 245, 245, 0.169);
+}
+.home-active
+{
+    color: #00fff2;
+    text-shadow: none;
+    text-shadow: 0px 0 30px #00d5ff;
+}
+.fa-plus
+{
+    position: fixed;
+    top: 200px;
+    right: 20px;
+}
+.add-planet
+{
+    position: fixed;
+    top: 260px;
+    right: 10px;
+    font-size: .3em;
+    padding-bottom: 10px;
+    border-bottom: 5px solid rgba(245, 245, 245, 0.169);
+}
+.add-active
+{
+    color: #00fff2;
+    text-shadow: none;
+    text-shadow: 0px 0 30px #00fff2;
+}
+.edit
+{
+    font-size: 1.1em;
+    position: fixed;
+    top: 350px;
+    right: 20px;
+}
+.edit-text
+{
+    position: fixed;
+    top: 400px;
+    right: 25px;
+    font-size: .3em;
+    padding-bottom: 10px;
+    border-bottom: 5px solid rgba(245, 245, 245, 0.169);
+}
+.delete
+{
+    font-size: 1.2em;
+    position: fixed;
+    top: 450px;
+    right: 10px;
+}
+.delete-text
+{
+    position: fixed;
+    top: 520px;
+    right: 10px;
+    font-size: .3em;
+    padding-bottom: 10px;
+    border-bottom: 5px solid rgba(245, 245, 245, 0.169);
+}
+.fa-ban
+{
+    font-size: 1.1em;
+    position: fixed;
+    top: 350px;
+    right: 25px;
+}
+.cancel
+{
+    position: fixed;
+    top: 400px;
+    right: 10px;
+    font-size: .3em;
+    padding-bottom: 10px;
+    border-bottom: 5px solid rgba(245, 245, 245, 0.169);
+}
+.blue-border
+{
+    border-bottom: 5px solid #00fff2;
+}
+h1
+{
+    color: rgba(255, 255, 255, 0.902);
+    text-shadow: 0 0 30px rgb(255, 255, 255);
+    font-size: 1em;
+    position: fixed;
+    width: .1px;
+    word-wrap: break-word;
+    top: 600px;
+    right: 60px;
+}
+h1:active
+{
+    color: black;
+    transition: .2s;
+}
+.planets-blue
+{
+    color: #00fff2;
+    text-shadow: 0 0 30px #00d5ff92;
+}
+h2
+{
+    color: whitesmoke;
+    font-size: 1.8em;
+    text-shadow: 0 0 50px rgba(255, 255, 255, 0.792);
+}
+.error
+{
+    margin-top: 300px;
+    text-align: center;
+    color: #00fff2;
+}
+h4
+{
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.751);
+    border-bottom: 2px solid white;
+}
+p
+{
+    font-size: .8em;
+    text-shadow: 0 0 30px #00d5ff;
+    color: white
+}
+.blue
+{
+    color: #00fff2;
+    text-shadow: 0 0 40px #00d5ff;
+}
+a
+{
+    text-decoration: none;
+}
+i
+{
+    color: rgba(255, 255, 255, 0.943);
+    text-shadow: 0 0 40px rgba(255, 255, 255, 0.382);
+}
+.fa
+{
+    margin: 0 auto;
+    padding: 0;
+}
+.fa-space-shuttle
+{
+    margin-top: 100px;
+    font-size: 3em;
+    transform: rotate(90deg);
+    transition-duration: 2s;
+}
+.fa:active
+{
+    color: black;
+}
+input
+{
+    font-family: inherit;
+    background-image: url(http://api.thumbr.it/whitenoise-361x370.png?background=000000&noise=626262&density=43&opacity=41);
+    text-align: center;
+    font-size: .8em;
+    margin: 20px;
+    box-shadow: 
+    inset 15px -10px 30px rgba(0, 0, 0, 0.676),
+    0 0 30px 5px rgb(17, 17, 17);
+    border-style: none;
+    border-width: none;
+}
+input::placeholder 
+{
+    color: #00fff2;
+    text-shadow: 0 0 3px rgb(243, 243, 243);
+    opacity: 1;
+}
+input:focus
+{
+    background-image: url(http://api.thumbr.it/whitenoise-361x370.png?background=edfaffff&noise=626262&density=98&opacity=100);
+    outline: none;
+    transition-duration: 1s;
+    color: black;
+    box-shadow: 0 0 30px 5px rgb(246, 246, 246);
+}
+input:focus::placeholder 
+{
+    color: rgba(0, 0, 0, 0.553);
+    text-shadow: 0 0 3px rgb(200, 200, 200);
+    opacity: 1;
+}
+.image-url
+{
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+}
+.add-name
+{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+}
+button 
+{
+    background-color: transparent;
+    border: none;
+    padding: 12px 16px; 
+    font-size: 1em;
+    cursor: pointer;
+}
+button:focus 
+{
+    outline: 0;
+}
+.planets
+{
+   display: grid;
+   grid-template-columns: 1fr; 
+}
+.img-planets
+{
+    margin-top: 50px;
+    width: 300px;
+    border-radius: 50%;
+    box-shadow: inset 0 0px 50px rgb(0, 0, 0),
+    0 0 60px 50px black;
+    border-style: none;
+    border-width: none;
+}
+.rotating 
+{
+    animation: rotating 160s linear infinite;
+}
+@keyframes rotating 
+{
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+}
+.scale
+{
+    animation: scale 10s ease-in-out infinite;
+}
+@keyframes scale 
+{
+    0% {
+        transform: scale(1) translateX(-25px);
+    }
+    50% {
+        transform: scale(1.05) translateX(0);
+    }
+    100% {
+        transform: scale(1) translateX(-25px);
+    }
+}
+.scale-reverse
+{
+    animation: scale-reverse 10s ease-in-out infinite;
+}
+@keyframes scale-reverse
+{
+    0% {
+        transform: scale(1.05) translateX(25px);
+    }
+    50% {
+        transform: scale(1) translateX(0px);
+    }
+    100% {
+        transform: scale(1.05) translateX(25px);
+    }
+}
+.planet
+{
+    margin-top: 150px;
+}
+.large-planet
+{
+    width: 400px;
+    box-shadow: inset 50px -10px 50px rgb(0, 0, 0),
+    0 0 60px 50px black;
+}
+.alter-btns
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.update-menu
+{
+    border: none;
+    display: grid;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2em;
+}
+.update
+{
+    box-shadow: none;
+    background-image: none;
+    border: none;
+    background-color: transparent;
+    color: whitesmoke;
+    width: 800px;
+    padding: 20px;
+    font-size: .5em;
+    margin: 50px auto;
+    border-radius: 50px;
+    background: linear-gradient(25deg, rgba(32, 32, 32, 0.19), rgba(198, 198, 198, 0.19));
+}
+.update:focus
+{
+    color: #00fff2;
+    box-shadow: 0 0 40px 10px rgb(246, 246, 246);
+    background-image: none;
+    border: none;
+    background: linear-gradient(25deg, rgba(198, 198, 198, 0.19), rgba(32, 32, 32, 0.19));
+}
+.update-name
+{
+    box-shadow: inset 15px -10px 30px rgba(0, 0, 0, 0.868),
+                inset -15px 10px 30px rgba(217, 217, 217, 0.717);
+    background-image: none;
+    border: none;
+    background-color: transparent;
+    color: whitesmoke;
+    width: 300px;
+    height: 300px;
+    padding: 20px;
+    font-size: 1em;
+    margin: 50px auto;
+    border-radius: 50%;
+    background: linear-gradient(25deg, rgba(61, 61, 61, 0.34), rgba(156, 156, 156, 0.443));
+}
+.update-name:focus
+{
+    box-shadow: inset 15px -10px 30px rgba(0, 0, 0, 0.676),
+                inset -15px 10px 30px rgb(255, 255, 255),
+                0 0 200px 20px rgb(246, 246, 246);
+    background-image: none;
+    color: #00fff2;
+    border: none;
+    background: linear-gradient(25deg, rgba(198, 198, 198, 0.423), rgba(32, 32, 32, 0.19));
+}

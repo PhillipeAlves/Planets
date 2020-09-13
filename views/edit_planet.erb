@@ -1,0 +1,56 @@
+<a href="/planets"><h1>PLANETS</h1></a>
+<label for="">
+    <a href="/"><i class="fa fa-globe" aria-hidden="true"></i></a>
+    <a href="/add_planet"><i class="fa fa-plus" aria-hidden="true"></i></a>
+</label>
+<p class="home">HOME</p>
+<p class="add-planet">ADD <br> PLANET</p>
+
+<h2 class="blue">EDIT</h2>
+
+<form class="update-menu" action="/planet/<%= edit_planet["id"] %>" method="post">
+    <input class type="hidden" name="_method" value="patch">
+    <h4>NAME</h4>
+    <label for=""></label>
+    <input class="update-name" name="name" type="text" value="<%= edit_planet["name"] %>" autocomplete="off">
+    <h4>IMAGE</h4>
+    <label for=""></label>
+    <input class="update" name="image_url" type="text" value="<%= edit_planet["image_url"] %>" autocomplete="off">
+    <h4>DIAMETER (KM)</h4>
+    <label for=""></label>
+    <input class="update" name="diameter" type="text" value="<%= edit_planet["diameter"] %>" autocomplete="off">
+    <h4>MASS (M⊕)</h4>
+    <label for=""></label>
+    <input class="update" name="mass" type="text" value="<%= edit_planet["mass"] %>" autocomplete="off">
+    <h4>MOON(S)</h4>
+    <label for=""></label>
+    <input class="update" name="moon_count" type="text" value="<%= edit_planet["moon_count"] %>" autocomplete="off">
+    <button><i class="fa fa-space-shuttle" aria-hidden="true"></i></button>
+</form>
+
+<div class="alter-btns">
+
+    <% if edit_planet["id"] != "12" %>
+
+        <form action="/planet" method="post">
+            <input type="hidden" name="_method" value="delete">
+            <input type="hidden" name="id" value="<%= edit_planet["id"] %>">
+            <button class="delete"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+        </form>
+        <p class="delete-text">DELETE</p>
+
+    <% end %>
+
+    <% if edit_planet["id"] == "12" %>
+
+        <a href="/"><i class="fa fa-ban" aria-hidden="true"></i></a> 
+        <p class="cancel blue-border">CANCEL</p>
+    
+    <% else %>
+
+        <a href="/planet/<%= edit_planet["id"] %>"><i class="fa fa-ban" aria-hidden="true"></i></a> 
+        <p class="cancel blue-border">CANCEL</p>
+
+    <% end %> 
+
+</div>

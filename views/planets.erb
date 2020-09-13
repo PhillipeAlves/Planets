@@ -1,0 +1,43 @@
+<h1 class="planets-blue">PLANETS</h1>
+
+<label for="">
+    <a href="/"><i class="fa fa-globe" aria-hidden="true"></i></a>
+    <a href="/add_planet"><i class="fa fa-plus" aria-hidden="true"></i></a>
+      
+</label>
+
+<p class="home">HOME</p>
+<p class="add-planet">ADD <br> PLANET</p>
+
+<div class="planets">
+    <% planets.each_with_index do |planet, index| %>
+
+        <h2><%= planet["name"] %></h2>
+
+        <% if index % 2 == 0 %>
+
+            <% if planet["id"] == "12" %>
+
+                <a class="scale"  href="/">
+                    <img class="img-planets rotating" src="<%= planet["image_url"] %>" alt="">
+                </a>
+            
+             <% else %>
+
+                <a class="scale"  href="/planet/<%= planet["id"] %>">
+                    <img class="img-planets rotating" src="<%= planet["image_url"] %>" alt="">
+                </a>
+
+            <% end %>
+
+        <% else %>
+
+            <a class="scale-reverse"  href="/planet/<%= planet["id"] %>">
+                <img class="img-planets rotating" src="<%= planet["image_url"] %>" alt="">
+            </a>
+        
+        <% end %>
+
+    <% end %>
+</div>
+

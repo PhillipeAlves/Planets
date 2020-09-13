@@ -1,0 +1,39 @@
+<a href="/planets"><h1>PLANETS</h1></a>
+<label for="">
+    <a href="/"><i class="fa fa-globe" aria-hidden="true"></i></a>
+    <a href="/add_planet"><i class="fa fa-plus" aria-hidden="true"></i></a>
+</label>
+
+<p class="home">HOME</p>
+<p class="add-planet">ADD <br> PLANET</p>
+
+<div class="planet">
+
+    <h2 class="blue"><%= planet["name"] %></h2>
+    <img class="img-planets large-planet rotating" src="<%= planet["image_url"] %>" alt=""> 
+    <h4>DIAMETER</h4>
+    <p class="blue"><%= planet["diameter"] %> KM</p>
+    <h4>MASS</h4>
+    <p class="blue"><%= planet["mass"] %> M</p>
+    <h4>MOON(S)</h4>
+    <p class="blue"><%= planet["moon_count"] %></p>
+
+</div>
+
+<div class="alter-btns">
+
+    <% if planet["id"] != "12" %>
+
+        <form action="/planet" method="post">
+            <input type="hidden" name="_method" value="delete">
+            <input type="hidden" name="id" value="<%= planet["id"] %>">
+            <button class="delete"><i class="fa fa-trash-o" aria-hidden="true"></i></button>
+        </form>
+        <p class="delete-text">DELETE</p>
+
+    <% end %>
+
+    <a href="/planet/<%= planet["id"] %>/edit_planet"><i class="fa fa-pencil edit" aria-hidden="true"></i></a>
+    <p class="edit-text">EDIT</p>
+
+</div>
