@@ -1,5 +1,5 @@
 require 'sinatra'
-# require 'sinatra/reloader'
+require 'sinatra/reloader'
 require "pg"
 
 
@@ -155,23 +155,6 @@ patch '/planet/:id' do
 
     diameter = params["diameter"]
     full_diameter = diameter.gsub(/[\s,(km)]/ ,"")
-  
-    # sql = "UPDATE planets SET "
-    #   if !params["name"].empty?
-    #   sql += "name = '#{ params["name"]}', "
-    # end
-    #   if !params["diameter"].empty?
-    #   sql += "diameter = '#{ params["diameter"]}', "
-    # end
-    #   if !params["mass"].empty?
-    #   sql += "mass = #{ params["mass"]}, "
-    # end
-    #   if !params["moon_count"].empty?
-    #   sql += "moon_count = #{ params["moon_count"]}, "
-    # end
-    # if !params["image_url"].empty?
-    #   sql += "image_url = #{ params["image_url"]}, "
-    # end
 
     if params["name"] != "" && params["imade_url"] != "" && full_diameter != "" && params["mass"] != "" && params["moon_count"] != ""
   
