@@ -18,3 +18,4 @@ purposes and data manipulation.
 - CSS
 - Ruby
 - SQL
+- Sinatra
