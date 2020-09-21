@@ -1,4 +1,4 @@
-![Banner](/public/banner_planets.gif)
+![Banner](/public/banner-planets.gif)
 
 ## The Project
 
